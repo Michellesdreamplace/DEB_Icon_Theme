@@ -1,11 +1,8 @@
 #!/bin/bash
 BENUTZER=$USER
-echo "Hallo $BENUTZER"
+echo "Huhu $BENUTZER"
 HOMEVERZEICHNIS=$HOME
 echo "Dein Home-Verzeichnis ist: $HOMEVERZEICHNIS"
-echo "************************************************************"
-echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
-mkdir -p ~/.icons
 echo "************************************************************"
 echo "    aktualisiere Paketdatenbank (Repository-Index) ..."
 echo " ..."
@@ -26,6 +23,9 @@ echo "************************************************************"
 echo "    installiere tar ..."
 echo " ..."
 sudo apt install tar -y
+echo "************************************************************"
+echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
+mkdir -p $HOMEVERZEICHNIS/.icons
 echo "************************************************************"
 echo "    klone Icon-Themes von GitHub ..."
 echo " ..."
