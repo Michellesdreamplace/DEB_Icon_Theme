@@ -24,6 +24,9 @@ echo "    klone Icon-Themes von GitHub ..."
 echo " ..."
 sudo git clone https://github.com/Michellesdreamplace/DEB_Icon_Theme.git ~/Downloads/MDP_DEB_Icon_Theme/
 echo "************************************************************"
+echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
+sudo mkdir -p ~/.icons
+echo "************************************************************"
 echo "    entpacke Icon-Themes in globalen Freigabeordner ..."
 echo " ..."
 sudo tar -vxf ~/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C ~/.icons/
