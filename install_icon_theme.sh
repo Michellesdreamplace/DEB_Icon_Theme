@@ -4,23 +4,39 @@ echo "Huhu $BENUTZER"
 HOMEVERZEICHNIS=$HOME
 echo "Dein Home-Verzeichnis ist: $HOMEVERZEICHNIS"
 echo "************************************************************"
-echo "    aktualisiere Paketdatenbank (Repository-Index) ..."
+echo "    lese Paketdatenbank (Repository-Index) neu ein"
+echo "    und finde defekte Pakete ..."
 echo " ..."
 sudo apt update --fix-missing
 echo "************************************************************"
-echo "    führe upgrade duch ..."
+echo "    alle vorhandene defekte Paketen finden und reparieren ..."
+echo " ..."
+sudo apt install -f
+echo "************************************************************"
+echo "    lese Paketdatenbank (Repository-Index) neu ein"
+echo " ..."
+sudo apt update
+echo "************************************************************"
+echo "    Installierte Pakete werden auf eine neuere Version aktualisiert ..."
+echo "    ... um geänderte Abhängigkeiten zu erfüllen,"
+echo "    werden ge­ge­be­nen­falls auch neue Pakete installiert ..."
 echo " ..."
 sudo apt upgrade -y
 echo "************************************************************"
 echo "    bereinige System von nutzlosen Paketen ..."
+echo "    deinstalliere alle automatisch installierten Pakete,"
+echo "    die keine Abhängigkeiten mehr zu anderen Paketen haben"
+echo "    und deshalb nicht mehr benötigt werden ..."
 echo " ..."
 sudo apt autoremove -y
 echo "************************************************************"
-echo "    installiere git ..."
+echo "    installiere git (falls nicht vorhanden) ..."
+echo "    ... um Repositories klonen zu können ..."
 echo " ..."
 sudo apt install git -y
 echo "************************************************************"
-echo "    installiere tar ..."
+echo "    installiere tar (falls nicht vorhanden) ..."
+echo "    ... um Dateien entpacken zu können ..."
 echo " ..."
 sudo apt install tar -y
 echo "************************************************************"
