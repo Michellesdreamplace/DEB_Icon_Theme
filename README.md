@@ -14,5 +14,4 @@
 
   -------------------------------------------------------------------------------------------
 
-<img src="/preview/preview_MDP_FullHD_BallGlassArt.jpg" alt="Alt-Text" title="MDP_FullHD_BallGlassArt" />
-
+    
