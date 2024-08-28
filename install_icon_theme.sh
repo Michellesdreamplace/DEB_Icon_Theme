@@ -40,20 +40,17 @@ echo "    ... um Dateien entpacken zu können ..."
 echo " ..."
 sudo apt install tar -y
 echo "************************************************************"
-echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
-mkdir -p $HOMEVERZEICHNIS/.icons
-echo "************************************************************"
 echo "    klone Icon-Themes von GitHub ..."
 echo " ..."
 sudo git clone https://github.com/Michellesdreamplace/DEB_Icon_Theme.git $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/
 echo "************************************************************"
 echo "    entpacke Icon-Themes in globalen Freigabeordner ..."
 echo " ..."
-sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C $HOMEVERZEICHNIS/.icons/
+sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C /usr/share/icons/
 echo "************************************************************"
 echo "    aufräumen ..."
 echo " ..."
-sudo rm -r ~/Downloads/MDP_DEB_Icon_Theme
+sudo rm -r $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme
 echo "************************************************************"
 echo " "
 echo "    Fertig ..."
