@@ -1,4 +1,11 @@
 #!/bin/bash
+BENUTZER=$USER
+echo "Hallo $BENUTZER"
+HOMEVERZEICHNIS=$HOME
+echo "Dein Home-Verzeichnis ist: $HOMEVERZEICHNIS"
+echo "************************************************************"
+echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
+mkdir -p ~/.icons
 echo "************************************************************"
 echo "    aktualisiere Paketdatenbank (Repository-Index) ..."
 echo " ..."
@@ -20,16 +27,13 @@ echo "    installiere tar ..."
 echo " ..."
 sudo apt install tar -y
 echo "************************************************************"
-echo "    erstelle ".icons" Verzeichnis, falls nicht vorhanden ..."
-mkdir -p ~/.icons
-echo "************************************************************"
 echo "    klone Icon-Themes von GitHub ..."
 echo " ..."
-sudo git clone https://github.com/Michellesdreamplace/DEB_Icon_Theme.git ~/Downloads/MDP_DEB_Icon_Theme/
+sudo git clone https://github.com/Michellesdreamplace/DEB_Icon_Theme.git $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/
 echo "************************************************************"
 echo "    entpacke Icon-Themes in globalen Freigabeordner ..."
 echo " ..."
-sudo tar -vxf ~/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C ~/.icons/
+sudo tar -xzf $HOMEVERZEICHNIS/Downloads/MDP_DEB_Icon_Theme/Icon_Theme.tar.gz -C $HOMEVERZEICHNIS/.icons/
 echo "************************************************************"
 echo "    aufräumen ..."
 echo " ..."
