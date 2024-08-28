@@ -11,3 +11,8 @@
 -➤ Öffne ein Terminal und führe das Skript mit folgendem Befehl aus:  
   
 ```sh ./Downloads/install_icon_theme.sh```  
+
+  -------------------------------------------------------------------------------------------
+
+<img src="/preview/preview_MDP_FullHD_BallGlassArt.jpg" alt="Alt-Text" title="MDP_FullHD_BallGlassArt" />
+
