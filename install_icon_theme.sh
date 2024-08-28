@@ -6,7 +6,7 @@ echo "Dein Home-Verzeichnis ist: $HOMEVERZEICHNIS"
 echo "************************************************************"
 echo "    aktualisiere Paketdatenbank (Repository-Index) ..."
 echo " ..."
-sudo apt update
+sudo apt update --fix-missing
 echo "************************************************************"
 echo "    führe upgrade duch ..."
 echo " ..."
